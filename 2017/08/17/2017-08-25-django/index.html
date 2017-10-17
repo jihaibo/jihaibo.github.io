@@ -8,19 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Django项目练习 | 越洋跨海</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程！">
+  <meta name="description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django项目练习">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/2017-08-25-django/index.html">
 <meta property="og:site_name" content="越洋跨海">
-<meta property="og:description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程！">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2092806-891b30800647489d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2092806-0a945ab4ebec6583.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-08-25T04:06:38.200Z">
+<meta property="og:description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！">
+<meta property="og:updated_time" content="2017-10-17T13:04:16.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django项目练习">
-<meta name="twitter:description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程！">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2092806-891b30800647489d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！">
   
     <link rel="alternative" href="/atom.xml" title="越洋跨海" type="application/atom+xml">
   
@@ -172,10 +169,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程！<br><a id="more"></a></p>
-<h4 id="网站收藏"><a href="#网站收藏" class="headerlink" title="网站收藏"></a>网站收藏</h4><p>一、非常完美的摄影网站：<br>1、<a href="https://1x.com/" target="_blank" rel="external">https://1x.com/</a><br><img src="http://upload-images.jianshu.io/upload_images/2092806-891b30800647489d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>2、<a href="http://pmagazine.co/" target="_blank" rel="external">http://pmagazine.co/</a><br><img src="http://upload-images.jianshu.io/upload_images/2092806-0a945ab4ebec6583.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h4 id="实用类网站"><a href="#实用类网站" class="headerlink" title="实用类网站"></a>实用类网站</h4><p>一、python论坛<br>1、<a href="http://www.pythontab.com/" target="_blank" rel="external">http://www.pythontab.com/</a><br>个人认为非常的不错</p>
+        <p>Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！<br><a id="more"></a></p>
+<h4 id="一、搭建环境的基本命令"><a href="#一、搭建环境的基本命令" class="headerlink" title="一、搭建环境的基本命令"></a>一、搭建环境的基本命令</h4><p>1、新建一个 django project<br>文件下首先要有django-admin.py 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python django-admin.py startproject project_name</div></pre></td></tr></table></figure></p>
+<p>2、新建 app<br>要先进入项目目录下，cd project_name 然后执行下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp app_name</div></pre></td></tr></table></figure></p>
+<p>3、创建数据库表 或 更改数据库表或字段<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Django <span class="number">1.7</span><span class="number">.1</span>及以上 用以下命令</div><div class="line"><span class="comment"># 1.创建更改的文件</span></div><div class="line">python manage.py makemigrations</div><div class="line"><span class="comment"># 2.将生成的py文件应用到数据库</span></div><div class="line">python manage.py migrate</div><div class="line"> </div><div class="line"><span class="comment"># 旧版本的Django 1.6及以下用</span></div><div class="line">python manage.py syncdb</div></pre></td></tr></table></figure></p>
+<p>4、启动自带服务器<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py runserver <span class="number">8080</span></div><div class="line"><span class="comment"># 关闭时可使用：Ctrl+Pause Break</span></div></pre></td></tr></table></figure></p>
+<p>5、请空数据库<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py flush</div><div class="line"><span class="comment"># 将数据全部清除，只留下空表</span></div></pre></td></tr></table></figure></p>
+<p>6、创建超级管理员<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">python manage.py createsuperuser</div><div class="line"></div><div class="line"><span class="comment"># 修改用户密码：</span></div><div class="line">python manage.py changepassword username</div></pre></td></tr></table></figure></p>
+<p>7、导出数据  导入数据<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">python manage.py dumpdata appname &gt; appname.json  <span class="comment"># 导出数据</span></div><div class="line"></div><div class="line">python manage.py loaddata appname.json  <span class="comment"># 导入数据</span></div></pre></td></tr></table></figure></p>
+<p>8、项目环境终端<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py shell</div><div class="line"><span class="comment"># 安装ipython 或者 bpython,可以在这个 shell 里面调用当前项目的 models.py 中的 API</span></div></pre></td></tr></table></figure></p>
+<p>9、数据库命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python manage.py dbshell</div></pre></td></tr></table></figure></p>
+<h4 id="二、创建一个项目：mystie（视图与网址的实现）"><a href="#二、创建一个项目：mystie（视图与网址的实现）" class="headerlink" title="二、创建一个项目：mystie（视图与网址的实现）"></a>二、创建一个项目：mystie（视图与网址的实现）</h4><p>1、创建项目成功后，查看文件（当前目录下必须有django-admin.py文件）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mysite</div><div class="line">├── manage.py</div><div class="line">└── mysite</div><div class="line">    ├── __init__.py</div><div class="line">    ├── settings.py</div><div class="line">    ├── urls.py</div><div class="line">    └── wsgi.py</div><div class="line"><span class="comment"># 部署服务器时用到 wsgi.py 文件</span></div></pre></td></tr></table></figure></p>
+<p>2、新建一个应用app<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp learn  <span class="comment"># learn是一个app的名称</span></div><div class="line"></div><div class="line"><span class="comment">#我们可以看到mysite中多个一个 learn 文件夹</span></div><div class="line">learn/</div><div class="line">├── __init__.py</div><div class="line">├── admin.py</div><div class="line">├── models.py</div><div class="line">├── tests.py</div><div class="line">└── views.py</div></pre></td></tr></table></figure></p>
+<p>3、把我们新定义的app加到settings.py中的INSTALL_APPS中<br>新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)</p>
+<p>4、定义视图函数，viwes.py中的内容（访问页面时的内容）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#-*- codingh: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse    </div><div class="line"><span class="comment"># 引入HttpResponse，它是用来向网页返回内容的，就像Python中的 print 一样，只不过 HttpResponse 是把内容显示到网页上。</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span>   <span class="comment">#定义了一个index()函数，第一个参数必须是 request，与网页发来的请求有关，request 变量里面包含get或post的内容，用户浏览器</span></div><div class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">u"欢迎光临，学习愉快！"</span>) </div><div class="line">        <span class="comment">#返回一个 HttpResponse 对象，可以经过一些处理，最终显示几个字到网页上</span></div></pre></td></tr></table></figure></p>
+<p>5、定义视图函数相关的URL(网址)  （即规定 访问什么网址对应什么内容）<br>查看django版本：python -m django –version<br>Django 1.7.x及以下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> patterns, include, url</div><div class="line"> </div><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line">admin.autodiscover()</div><div class="line"> </div><div class="line">urlpatterns = patterns(<span class="string">''</span>,</div><div class="line">    url(<span class="string">r'^$'</span>, <span class="string">'learn.views.index'</span>),  <span class="comment"># new</span></div><div class="line">    <span class="comment"># url(r'^blog/', include('blog.urls')),</span></div><div class="line"> </div><div class="line">    url(<span class="string">r'^admin/'</span>, include(admin.site.urls)),</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>Django 1.8.x及以上，Django 官方鼓励（或说要求）先引入，再使用：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line"><span class="keyword">from</span> learn <span class="keyword">import</span> views <span class="keyword">as</span> learn_views  <span class="comment"># new</span></div><div class="line"> </div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^$'</span>, learn_views.index),  <span class="comment"># new</span></div><div class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</div><div class="line">]</div></pre></td></tr></table></figure></p>
+<h4 id="三、创建一个项目：mystie（视图与网址进阶）"><a href="#三、创建一个项目：mystie（视图与网址进阶）" class="headerlink" title="三、创建一个项目：mystie（视图与网址进阶）"></a>三、创建一个项目：mystie（视图与网址进阶）</h4><p>1、新建一个clac应用<br>修改views.py<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">from django.shortcuts import render</div><div class="line">from django.http import HttpResponse</div><div class="line"></div><div class="line">def add(request):</div><div class="line">        a = request.GET['a']</div><div class="line">        b = request.GET['b]</div><div class="line">        c = int(a) + int(b)</div><div class="line">        return HttpResponse(str(c))</div><div class="line">      # 注意： request.GET 类似于一个字典，更好的办法是用 request.GET.get('a', 0) 当没有传递 a 的时候默认 a 为 0</div></pre></td></tr></table></figure></p>
+<p>2、在urs中增加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(r&apos;^add/$&apos;, &apos;calc.views.add&apos;, name=&apos;add&apos;)</div></pre></td></tr></table></figure></p>
+<p>3、启动服务，访问<a href="http://127.0.0.1:8000/add/?a=3&amp;b=5，页面得出结果：8" target="_blank" rel="external">http://127.0.0.1:8000/add/?a=3&amp;b=5，页面得出结果：8</a></p>
+<p>4、采用/add/3/4/这样的网址方式<br>修改views.python<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add2</span><span class="params">(request,a,b)</span>:</span></div><div class="line">        c = <span class="string">'int(a) + int(b)'</span></div><div class="line">        <span class="keyword">return</span> HttpResponse(str(c))</div></pre></td></tr></table></figure></p>
+<p>修改urls中信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(r&apos;^add/(\d+)/(\d+)/$&apos;,&apos;calc_views.add2&apos;,name=&apos;add2&apos;)</div></pre></td></tr></table></figure></p>
+<p>5、启动服务，访问<a href="http://127.0.0.1:8000/add/3/5/，页面得出结果：8" target="_blank" rel="external">http://127.0.0.1:8000/add/3/5/，页面得出结果：8</a></p>
 
       
 
@@ -274,18 +289,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/17/2017-08-17-information/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          知识库
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/01/2017-07-01-python-study-plan/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python学习计划指南</div>
+    <a href="/2017/08/17/2017-08-17-information/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">知识库</div>
       <i class="icon-circle-right"></i>
     </a>
   
