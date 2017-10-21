@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>越洋跨海</title>
+  <title>Django项目练习(一) | 越洋跨海</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="越洋跨海">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django项目练习(一)">
+<meta property="og:url" content="http://yoursite.com/2017/10/17/2017-08-25-django/index.html">
 <meta property="og:site_name" content="越洋跨海">
+<meta property="og:description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！">
+<meta property="og:updated_time" content="2017-10-18T11:53:35.654Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越洋跨海">
+<meta name="twitter:title" content="Django项目练习(一)">
+<meta name="twitter:description" content="Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！">
   
     <link rel="alternative" href="/atom.xml" title="越洋跨海" type="application/atom+xml">
   
@@ -145,66 +149,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2017-08-25-django（2）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-2017-08-25-django" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/18/2017-08-25-django（2）/">Django项目练习(二)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/18/2017-08-25-django（2）/" class="archive-article-date">
-  	<time datetime="2017-10-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本章主要介绍URL、模板、数据模型功能记录！<br>
-        
-          <a class="article-more-a" href="/2017/10/18/2017-08-25-django（2）/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/18/2017-08-25-django（2）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-2017-08-25-django" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/17/2017-08-25-django/">Django项目练习(一)</a>
+    <h1 class="article-title" itemprop="name">
+      Django项目练习(一)
     </h1>
   
 
@@ -217,62 +169,57 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！<br>
-        
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django/#more">more >></a>
-        
+        <p>Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！<br><a id="more"></a></p>
+<h4 id="一、搭建环境的基本命令"><a href="#一、搭建环境的基本命令" class="headerlink" title="一、搭建环境的基本命令"></a>一、搭建环境的基本命令</h4><p>1、新建一个 django project<br>文件下首先要有django-admin.py 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python django-admin.py startproject project_name</div></pre></td></tr></table></figure></p>
+<p>2、新建 app<br>要先进入项目目录下，cd project_name 然后执行下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp app_name</div></pre></td></tr></table></figure></p>
+<p>3、创建数据库表 或 更改数据库表或字段<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Django <span class="number">1.7</span><span class="number">.1</span>及以上 用以下命令</div><div class="line"><span class="comment"># 1.创建更改的文件</span></div><div class="line">python manage.py makemigrations</div><div class="line"><span class="comment"># 2.将生成的py文件应用到数据库</span></div><div class="line">python manage.py migrate</div><div class="line"> </div><div class="line"><span class="comment"># 旧版本的Django 1.6及以下用</span></div><div class="line">python manage.py syncdb</div></pre></td></tr></table></figure></p>
+<p>4、启动自带服务器<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py runserver <span class="number">8080</span></div><div class="line"><span class="comment"># 关闭时可使用：Ctrl+Pause Break</span></div></pre></td></tr></table></figure></p>
+<p>5、请空数据库<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py flush</div><div class="line"><span class="comment"># 将数据全部清除，只留下空表</span></div></pre></td></tr></table></figure></p>
+<p>6、创建超级管理员<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">python manage.py createsuperuser</div><div class="line"></div><div class="line"><span class="comment"># 修改用户密码：</span></div><div class="line">python manage.py changepassword username</div></pre></td></tr></table></figure></p>
+<p>7、导出数据  导入数据<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">python manage.py dumpdata appname &gt; appname.json  <span class="comment"># 导出数据</span></div><div class="line"></div><div class="line">python manage.py loaddata appname.json  <span class="comment"># 导入数据</span></div></pre></td></tr></table></figure></p>
+<p>8、项目环境终端<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python manage.py shell</div><div class="line"><span class="comment"># 安装ipython 或者 bpython,可以在这个 shell 里面调用当前项目的 models.py 中的 API</span></div></pre></td></tr></table></figure></p>
+<p>9、数据库命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python manage.py dbshell</div></pre></td></tr></table></figure></p>
+<h4 id="二、创建一个项目：mystie（视图与网址的实现）"><a href="#二、创建一个项目：mystie（视图与网址的实现）" class="headerlink" title="二、创建一个项目：mystie（视图与网址的实现）"></a>二、创建一个项目：mystie（视图与网址的实现）</h4><p>1、创建项目成功后，查看文件（当前目录下必须有django-admin.py文件）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mysite</div><div class="line">├── manage.py</div><div class="line">└── mysite</div><div class="line">    ├── __init__.py</div><div class="line">    ├── settings.py</div><div class="line">    ├── urls.py</div><div class="line">    └── wsgi.py</div><div class="line"><span class="comment"># 部署服务器时用到 wsgi.py 文件</span></div></pre></td></tr></table></figure></p>
+<p>2、新建一个应用app<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">python manage.py startapp learn  <span class="comment"># learn是一个app的名称</span></div><div class="line"></div><div class="line"><span class="comment">#我们可以看到mysite中多个一个 learn 文件夹</span></div><div class="line">learn/</div><div class="line">├── __init__.py</div><div class="line">├── admin.py</div><div class="line">├── models.py</div><div class="line">├── tests.py</div><div class="line">└── views.py</div></pre></td></tr></table></figure></p>
+<p>3、把我们新定义的app加到settings.py中的INSTALL_APPS中<br>新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)</p>
+<p>4、定义视图函数，viwes.py中的内容（访问页面时的内容）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#-*- codingh: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse    </div><div class="line"><span class="comment"># 引入HttpResponse，它是用来向网页返回内容的，就像Python中的 print 一样，只不过 HttpResponse 是把内容显示到网页上。</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span>   <span class="comment">#定义了一个index()函数，第一个参数必须是 request，与网页发来的请求有关，request 变量里面包含get或post的内容，用户浏览器</span></div><div class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">u"欢迎光临，学习愉快！"</span>) </div><div class="line">        <span class="comment">#返回一个 HttpResponse 对象，可以经过一些处理，最终显示几个字到网页上</span></div></pre></td></tr></table></figure></p>
+<p>5、定义视图函数相关的URL(网址)  （即规定 访问什么网址对应什么内容）<br>查看django版本：python -m django –version<br>Django 1.7.x及以下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> patterns, include, url</div><div class="line"> </div><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line">admin.autodiscover()</div><div class="line"> </div><div class="line">urlpatterns = patterns(<span class="string">''</span>,</div><div class="line">    url(<span class="string">r'^$'</span>, <span class="string">'learn.views.index'</span>),  <span class="comment"># new</span></div><div class="line">    <span class="comment"># url(r'^blog/', include('blog.urls')),</span></div><div class="line"> </div><div class="line">    url(<span class="string">r'^admin/'</span>, include(admin.site.urls)),</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>Django 1.8.x及以上，Django 官方鼓励（或说要求）先引入，再使用：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line"><span class="keyword">from</span> learn <span class="keyword">import</span> views <span class="keyword">as</span> learn_views  <span class="comment"># new</span></div><div class="line"> </div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^$'</span>, learn_views.index),  <span class="comment"># new</span></div><div class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</div><div class="line">]</div></pre></td></tr></table></figure></p>
+<h4 id="三、创建一个项目：mystie（视图与网址进阶）"><a href="#三、创建一个项目：mystie（视图与网址进阶）" class="headerlink" title="三、创建一个项目：mystie（视图与网址进阶）"></a>三、创建一个项目：mystie（视图与网址进阶）</h4><p>1、新建一个clac应用<br>修改views.py<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">from django.shortcuts import render</div><div class="line">from django.http import HttpResponse</div><div class="line"></div><div class="line">def add(request):</div><div class="line">        a = request.GET['a']</div><div class="line">        b = request.GET['b]</div><div class="line">        c = int(a) + int(b)</div><div class="line">        return HttpResponse(str(c))</div><div class="line">      # 注意： request.GET 类似于一个字典，更好的办法是用 request.GET.get('a', 0) 当没有传递 a 的时候默认 a 为 0</div></pre></td></tr></table></figure></p>
+<p>2、在urs中增加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(r&apos;^add/$&apos;, &apos;calc.views.add&apos;, name=&apos;add&apos;)</div></pre></td></tr></table></figure></p>
+<p>3、启动服务，访问<a href="http://127.0.0.1:8000/add/?a=3&amp;b=5，页面得出结果：8" target="_blank" rel="external">http://127.0.0.1:8000/add/?a=3&amp;b=5，页面得出结果：8</a></p>
+<p>4、采用/add/3/4/这样的网址方式<br>修改views.python<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add2</span><span class="params">(request,a,b)</span>:</span></div><div class="line">        c = <span class="string">'int(a) + int(b)'</span></div><div class="line">        <span class="keyword">return</span> HttpResponse(str(c))</div></pre></td></tr></table></figure></p>
+<p>修改urls中信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url(r&apos;^add/(\d+)/(\d+)/$&apos;,&apos;calc_views.add2&apos;,name=&apos;add2&apos;)</div></pre></td></tr></table></figure></p>
+<p>5、启动服务，访问<a href="http://127.0.0.1:8000/add/3/5/，页面得出结果：8" target="_blank" rel="external">http://127.0.0.1:8000/add/3/5/，页面得出结果：8</a></p>
+
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-2017-08-25-django（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/17/2017-08-25-django（1）/">Django项目练习(一)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/17/2017-08-25-django（1）/" class="archive-article-date">
-  	<time datetime="2017-10-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！<br>
-        
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django（1）/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>打赏的人最帅了<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -281,172 +228,94 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django（1）/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/17/2017-08-25-django/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-2017-08-17-information" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/17/2017-08-17-information/">知识库</a>
-    </h1>
+    <a href="/2017/10/18/2017-08-25-django（2）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Django项目练习(二)
+        
+      </div>
+    </a>
   
-
-        
-        <a href="/2017/08/17/2017-08-17-information/" class="archive-article-date">
-  	<time datetime="2017-08-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>世界那么大，天地那么阔，光用脑子是记不住的，山形水色，尽在此中！<br>
-        
-          <a class="article-more-a" href="/2017/08/17/2017-08-17-information/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/17/2017-08-17-information/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+  
+    <a href="/2017/10/17/2017-08-25-django（1）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Django项目练习(一)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-2017-07-01-python-study-plan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/01/2017-07-01-python-study-plan/">python学习计划指南</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/01/2017-07-01-python-study-plan/" class="archive-article-date">
-  	<time datetime="2017-06-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对于python的学习永远是在口头上，资料看再多，不付诸行动都是妄谈，好比你看再多的风景画，也比不上出去看看更能让你融入其中，这就是实践的重要性。<br>
-        
-          <a class="article-more-a" href="/2017/07/01/2017-07-01-python-study-plan/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/01/2017-07-01-python-study-plan/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-haibo-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/29/haibo-blog/">haibo&#39;s blog</a>
-    </h1>
   
 
-        
-        <a href="/2017/06/29/haibo-blog/" class="archive-article-date">
-  	<time datetime="2017-06-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>该文章是搭建blog默认带出的文章，感谢各位大拿的技术分享！！！<br>更多中的内容都是文章书写的具体方法。<br>
-        
-          <a class="article-more-a" href="/2017/06/29/haibo-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/29/haibo-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -469,8 +338,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

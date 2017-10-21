@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>越洋跨海</title>
+  <title>Django项目练习(二) | 越洋跨海</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="越洋跨海">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="本章主要介绍URL、模板、数据模型功能记录！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django项目练习(二)">
+<meta property="og:url" content="http://yoursite.com/2017/10/18/2017-08-25-django（2）/index.html">
 <meta property="og:site_name" content="越洋跨海">
+<meta property="og:description" content="本章主要介绍URL、模板、数据模型功能记录！">
+<meta property="og:updated_time" content="2017-10-20T14:50:30.892Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越洋跨海">
+<meta name="twitter:title" content="Django项目练习(二)">
+<meta name="twitter:description" content="本章主要介绍URL、模板、数据模型功能记录！">
   
     <link rel="alternative" href="/atom.xml" title="越洋跨海" type="application/atom+xml">
   
@@ -145,16 +149,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2017-08-25-django（2）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-2017-08-25-django（2）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/18/2017-08-25-django（2）/">Django项目练习(二)</a>
+    <h1 class="article-title" itemprop="name">
+      Django项目练习(二)
     </h1>
   
 
@@ -167,112 +169,94 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本章主要介绍URL、模板、数据模型功能记录！<br>
-        
-          <a class="article-more-a" href="/2017/10/18/2017-08-25-django（2）/#more">more >></a>
-        
+        <p>本章主要介绍URL、模板、数据模型功能记录！<br><a id="more"></a></p>
+<h4 id="一、URL-name细解"><a href="#一、URL-name细解" class="headerlink" title="一、URL name细解"></a>一、URL name细解</h4><p>1、将calc中的views.py中修改如下内容：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">         <span class="keyword">return</span> render(request,<span class="string">'home.html'</span>)</div></pre></td></tr></table></figure></p>
+<p>2、将calc这个app添加到setting.py中<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">INSTALLED_APPS = [</div><div class="line">    <span class="string">'django.contrib.admin'</span>,</div><div class="line">    <span class="string">'django.contrib.auth'</span>,</div><div class="line">    <span class="string">'django.contrib.contenttypes'</span>,</div><div class="line">    <span class="string">'django.contrib.sessions'</span>,</div><div class="line">    <span class="string">'django.contrib.messages'</span>,</div><div class="line">    <span class="string">'django.contrib.staticfiles'</span>,</div><div class="line"> </div><div class="line">    <span class="string">'calc'</span>,</div><div class="line">]</div><div class="line"><span class="comment"># 使用render的时候，Django 会自动找到 INSTALLED_APPS 中列出的各个 app 下的 templates 中的文件。</span></div></pre></td></tr></table></figure></p>
+<p>3、编写home.html中的内容<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>欢迎光临<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">学习笔记！！！</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>4、显示一个基本的字符串在网页上<br>views.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span><span class="params">(request)</span>:</span></div><div class="line">        string = <span class="string">u"打印字符串"</span></div><div class="line">        <span class="keyword">return</span> render(request,<span class="string">'home.html'</span>,&#123;<span class="string">'string'</span>:string&#125;)</div></pre></td></tr></table></figure></p>
+<p>home.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;stirng&#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>5、基本的 for 循环 和 List内容的显示<br>views.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">second</span><span class="params">(request)</span>:</span></div><div class="line">        TutoriaList = [<span class="string">"HTML"</span>,<span class="string">"CSS"</span>,<span class="string">"jQuery"</span>,<span class="string">"Django"</span>]</div><div class="line">        <span class="keyword">return</span> render(request,<span class="string">'second.html'</span>,&#123;<span class="string">'TutoriaList'</span>:TutoriaList&#125;)</div></pre></td></tr></table></figure></p>
+<p>second.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% for i in TutoriaList %&#125;</div><div class="line">&#123;&#123; i &#125;&#125;</div><div class="line">&#123;% endfor %&#125;</div></pre></td></tr></table></figure></p>
+<p>6、基本的 for 循环 和 字典 内容的显示<br>views.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">third</span><span class="params">(request)</span>:</span></div><div class="line">        info_dict = &#123;<span class="string">'site'</span>:<span class="string">u'新华'</span>,<span class="string">'content'</span>:<span class="string">u'字典'</span>&#125;</div><div class="line">        <span class="keyword">return</span> render(request,<span class="string">'third.html'</span>,&#123;<span class="string">'info_dict'</span>:info_dict&#125;)</div></pre></td></tr></table></figure></p>
+<p>third.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% for key,value in info_dict.item %&#125;</div><div class="line">        &#123;&#123; key &#125;&#125; : &#123;&#123; value &#125;&#125;</div><div class="line">&#123;% endfor %&#125;</div></pre></td></tr></table></figure></p>
+<p>7、在模板进行 条件判断和 for 循环的详细操作<br>views.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">four</span><span class="params">(request)</span>:</span></div><div class="line">        List = map(str,range(<span class="number">100</span>)) <span class="comment"># 一个长度为100的List</span></div><div class="line">        <span class="keyword">return</span> render(request,<span class="string">'four.html'</span>,&#123;<span class="string">'List'</span>：List&#125;)</div></pre></td></tr></table></figure></p>
+<p>four.html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% for item in List %&#125;</div><div class="line">    &#123;&#123; item &#125;&#125; &#123;% if not floop.last %&#125;,&#123;% endif %&#125;</div><div class="line"><span class="comment">&lt;!-- forloop.last判断,不是最后一项就加逗号（，）; 是最后一项就不加 --&gt;</span></div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>forloop.counter</td>
+<td>索引从1开始算</td>
+</tr>
+<tr>
+<td>forloop.counter0</td>
+<td>索引从0开始算</td>
+</tr>
+<tr>
+<td>forloop.revcounter</td>
+<td>索引从最大长度到1</td>
+</tr>
+<tr>
+<td>forloop.revcounter0</td>
+<td>索引从最大长度到0</td>
+</tr>
+<tr>
+<td>forloop.first</td>
+<td>当遍历的元素为第一项时为真</td>
+</tr>
+<tr>
+<td>forloop.last</td>
+<td>当遍历的元素为最后一项时为真</td>
+</tr>
+<tr>
+<td>forloop.parentloop</td>
+<td>用在嵌套的for循环中，获取上一层for循环的forloop</td>
+</tr>
+</tbody>
+</table>
+<p>当列表中可能为空值时用 for  empty<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">&#123;% for athlete in athlete_list %&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123; athlete.name &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">&#123;% empty %&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>抱歉，列表为空<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">&#123;% endfor  %&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>8、模板中的逻辑操作：<br>==, !=, &gt;=, &lt;=, &gt;, &lt; 这些比较都可以在模板中使用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% if var &gt;= 90 %&#125;</div><div class="line">成绩优秀,学得不错!</div><div class="line">&#123;% elif var &gt;= 80 %&#125;</div><div class="line">成绩良好</div><div class="line">&#123;% elif var &gt;= 70 %&#125;</div><div class="line">成绩一般</div><div class="line">&#123;% elif var &gt;= 60 %&#125;</div><div class="line">需要努力</div><div class="line">&#123;% else %&#125;</div><div class="line">不及格，多注意学习方法</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure></p>
+<p>判断num是不是在0到100之间<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;% if num <span class="tag">&lt;<span class="name">=</span> <span class="attr">100</span> <span class="attr">and</span> <span class="attr">num</span> &gt;</span>=0 %&#125;</div><div class="line">num is true</div><div class="line">&#123;% else %&#125;</div><div class="line">超出范围</div></pre></td></tr></table></figure></p>
+<p>判断一个字符在不在一个列表中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% if &apos;nihao&apos; in List %&#125;</div><div class="line">在列表中</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure></p>
+<p>9.1、获取当前用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;request.user&#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>如果登陆就显示内容，不登陆就不显示内容：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% if requst.user.is_authenticated %&#125;</div><div class="line">        &#123;&#123;  request.user.username &#125;&#125;,您好！</div><div class="line">&#123;%  else %&#125;</div><div class="line">        请登录，这里给链接</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure></p>
+<p>9.2.1、获取当前网址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; request.path &#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>9.2.2、获取当前GET参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; request.GET.urlencode &#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>9.2.3、合并一起用的 例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">"&#123;&#123; request.path &#125;&#125;?&#123;&#123;request.GET.urlencode&#125;&#125;&amp;delete=1"</span>&gt;</span>当前网址加参数delete<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 比如我们可以判断 delete 参数是不是 1 来删除当前的页面内容 --&gt;</span></div></pre></td></tr></table></figure></p>
+
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/18/2017-08-25-django（2）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-2017-08-25-django" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/17/2017-08-25-django/">Django项目练习(一)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/17/2017-08-25-django/" class="archive-article-date">
-  	<time datetime="2017-10-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！<br>
-        
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-2017-08-25-django（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/17/2017-08-25-django（1）/">Django项目练习(一)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/17/2017-08-25-django（1）/" class="archive-article-date">
-  	<time datetime="2017-10-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Django作为python开发web项目框架，是非常值得我学习，学习是有计划与记录的，此页便是我的学习历程，资料均来源于网络！<br>
-        
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django（1）/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>打赏的人最帅了<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -281,172 +265,85 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/17/2017-08-25-django（1）/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/18/2017-08-25-django（2）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-2017-08-17-information" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/17/2017-08-17-information/">知识库</a>
-    </h1>
   
-
-        
-        <a href="/2017/08/17/2017-08-17-information/" class="archive-article-date">
-  	<time datetime="2017-08-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>世界那么大，天地那么阔，光用脑子是记不住的，山形水色，尽在此中！<br>
-        
-          <a class="article-more-a" href="/2017/08/17/2017-08-17-information/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/17/2017-08-17-information/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/10/17/2017-08-25-django/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Django项目练习(一)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-2017-07-01-python-study-plan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/01/2017-07-01-python-study-plan/">python学习计划指南</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/01/2017-07-01-python-study-plan/" class="archive-article-date">
-  	<time datetime="2017-06-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对于python的学习永远是在口头上，资料看再多，不付诸行动都是妄谈，好比你看再多的风景画，也比不上出去看看更能让你融入其中，这就是实践的重要性。<br>
-        
-          <a class="article-more-a" href="/2017/07/01/2017-07-01-python-study-plan/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/01/2017-07-01-python-study-plan/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-haibo-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/29/haibo-blog/">haibo&#39;s blog</a>
-    </h1>
   
 
-        
-        <a href="/2017/06/29/haibo-blog/" class="archive-article-date">
-  	<time datetime="2017-06-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>该文章是搭建blog默认带出的文章，感谢各位大拿的技术分享！！！<br>更多中的内容都是文章书写的具体方法。<br>
-        
-          <a class="article-more-a" href="/2017/06/29/haibo-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/29/haibo-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -469,8 +366,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
